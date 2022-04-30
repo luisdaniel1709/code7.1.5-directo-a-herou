@@ -71,8 +71,6 @@ def createUploading(filename,totalBits,currentBits,speed,time,originalname=''):
     msg += '➢ Velocidad: '+sizeof_fmt(speed)+'/s\n\n'
     msg += '➢ Tiempo restante: '+str(datetime.timedelta(seconds=int(time)))+'s\n\n'
 
-    if tid!='':
-        msg+= '/cancel_' + tid
     return msg
 def createCompresing(filename,filesize,splitsize):
     msg = '🗜️𝙲𝙾𝙼𝙿𝚁𝙸𝙼𝙸𝙴𝙽𝙳𝙾🗜️... \n\n'
@@ -81,8 +79,6 @@ def createCompresing(filename,filesize,splitsize):
     msg+= '➢ Tamaño de Partes: ' + str(sizeof_fmt(splitsize))+'\n'
     msg+= '➢ Cantidad Partes: ' + str(round(int(filesize/splitsize)+1,1))+'\n\n'
 
-    if tid!='':
-        msg+= '/cancel_' + tid
     return msg
 def createFinishUploading(filename,filesize,split_size,current,count,findex):
     msg = '📌𝙿𝚁𝙾𝙲𝙴𝚂𝙾 𝙵𝙸𝙽𝙰𝙻𝙸𝚉𝙰𝙳𝙾📌\n\n'
@@ -137,15 +133,15 @@ def createStat(username,userdata,isadmin):
     msgAdmin = 'NO'
     if isadmin:
         msgAdmin = 'SI'
-    msg+= '➢Admin : ' + msgAdmin + '\n'
+    msg+= '➢ Admin : ' + msgAdmin + '\n'
     proxy = 'NO'
     if userdata['proxy'] !='':
        proxy = 'SI'
     tokenize = 'NO'
     if userdata['tokenize']!=0:
        tokenize = 'SI'
-    msg+= '➢Proxy: ' + proxy + '\n'
-    msg+= '➢Tokenizar : ' + tokenize + '\n\n'
+    msg+= '➢ Proxy: ' + proxy + '\n'
+    msg+= '➢ Tokenizar : ' + tokenize + '\n\n'
     msg+= '⚙️𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚁 𝙲𝚁𝙴𝙳𝙴𝙽𝙲𝙸𝙰𝙻𝙴𝚂⚙️\n Ejemplo: /acc usuario,contraseña'
     return msg
     
