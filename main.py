@@ -109,7 +109,7 @@ def processUploadFiles(filename,filesize,files,update,bot,message,thread=None,jd
                     except:pass
                 return client
             else:
-                bot.editMessageText(message,'⚠️Error en la nube⚠️')
+                bot.editMessageText(message,'⚠️𝙴𝚛𝚛𝚘𝚛 𝚎𝚗 𝚕𝚊 𝚗𝚞𝚋𝚎⚠️')
         elif cloudtype == 'cloud':
             tokenize = False
             if user_info['tokenize']!=0:
@@ -133,7 +133,7 @@ def processUploadFiles(filename,filesize,files,update,bot,message,thread=None,jd
                return filesdata
         return None
     except Exception as ex:
-        bot.editMessageText(message,'⚠️Error en la nube⚠️')
+        bot.editMessageText(message,'⚠️𝙴𝚛𝚛𝚘𝚛 𝚎𝚗 𝚕𝚊 𝚗𝚞𝚋𝚎⚠️')
 
 
 def processFile(update,bot,message,file,thread=None,jdb=None):
@@ -192,7 +192,7 @@ def processFile(update,bot,message,file,thread=None,jdb=None):
             txtname = str(file).split('/')[-1].split('.')[0] + '.txt'
             sendTxt(txtname,files,update,bot)
     else:
-        bot.editMessageText(message,'⚠️Error en la nube⚠️')
+        bot.editMessageText(message,'⚠️𝙴𝚛𝚛𝚘𝚛 𝚎𝚗 𝚕𝚊 𝚗𝚞𝚋𝚎⚠️')
 
 def ddl(update,bot,message,url,file_name='',thread=None,jdb=None):
     downloader = Downloader()
@@ -548,7 +548,7 @@ def onmessage(update,bot:ObigramClient):
             return
         #end
 
-        message = bot.sendMessage(update.message.chat.id,'⏳𝙰𝚗𝚊𝚕𝚒𝚣𝚊𝚗𝚍𝚘...⌛')
+        message = bot.sendMessage(update.message.chat.id,'⏳𝙰𝙽𝙰𝙻𝙸𝚉𝙰𝙽𝙳𝙾...⌛')
 
         thread.store('msg',message)
 
@@ -601,7 +601,7 @@ def onmessage(update,bot:ObigramClient):
                         i+=1
                         bot.editMessageText(message, f'{info1}',parse_mode="html")
              else:
-                bot.editMessageText(message,'⚠️Error y causas🧐\n1-Revise su Cuenta\n2-Servidor Desabilitado: '+client.path)
+                bot.editMessageText(message,'⚠️𝙴𝚛𝚛𝚘𝚛 𝚢 𝚙𝚘𝚜𝚒𝚋𝚕𝚎𝚜 𝚌𝚊𝚞𝚜𝚊𝚜🧐\n1-Revise su Cuenta\n2-Servidor Desabilitado: '+client.path)
         elif '/txt_' in msgText and user_info['cloudtype']=='moodle':
              findex = str(msgText).split('_')[1]
              findex = int(findex)
@@ -617,9 +617,9 @@ def onmessage(update,bot:ObigramClient):
                  txtname = evindex['name']+'.txt'
                  sendTxt(txtname,evindex['files'],update,bot)
                  client.logout()
-                 bot.editMessageText(message,'TXT Aqui👇')
+                 bot.editMessageText(message,'𝚃𝚇𝚃 𝙰𝚚𝚞𝚒👇')
              else:
-                bot.editMessageText(message,'⚠️Error y causas🧐\n1-Revise su Cuenta\n2-Servidor Desabilitado: '+client.path)
+                bot.editMessageText(message,'⚠️𝙴𝚛𝚛𝚘𝚛 𝚢 𝚙𝚘𝚜𝚒𝚋𝚕𝚎𝚜 𝚌𝚊𝚞𝚜𝚊𝚜🧐\n1-Revise su Cuenta\n2-Servidor Desabilitado: '+client.path)
              pass
         elif '/del_' in msgText and user_info['cloudtype']=='moodle':
             findex = int(str(msgText).split('_')[1])
@@ -634,9 +634,9 @@ def onmessage(update,bot:ObigramClient):
                 evfile = client.getEvidences()[findex]
                 client.deleteEvidence(evfile)
                 client.logout()
-                bot.editMessageText(message,'Archivo eliminado🗑️')
+                bot.editMessageText(message,'𝙰𝚛𝚌𝚑𝚒𝚟𝚘 𝚎𝚕𝚒𝚖𝚒𝚗𝚊𝚍𝚘🗑️')
             else:
-                bot.editMessageText(message,'⚠️Error y causas🧐\n1-Revise su Cuenta\n2-Servidor Desabilitado: '+client.path)
+                bot.editMessageText(message,'⚠️𝙴𝚛𝚛𝚘𝚛 𝚢 𝚙𝚘𝚜𝚒𝚋𝚕𝚎𝚜 𝚌𝚊𝚞𝚜𝚊𝚜🧐\n1-Revise su Cuenta\n2-Servidor Desabilitado: '+client.path)
         elif 'http' in msgText:
             url = msgText
             ddl(update,bot,message,url,file_name='',thread=thread,jdb=jdb)
@@ -656,7 +656,7 @@ def onmessage(update,bot:ObigramClient):
             #    import asyncio
             #    asyncio.run(tlmedia.download_media(api_id,api_hash,bot_token,chat_id,message_id))
             #    return
-            bot.editMessageText(message,'⚠️Error, no se pudo analizar correctamente⚠️')
+            bot.editMessageText(message,'⚠️𝙴𝚛𝚛𝚘𝚛, 𝚗𝚘 𝚜𝚎 𝚙𝚞𝚍𝚘 𝚊𝚗𝚊𝚕𝚒𝚣𝚊𝚛 𝚌𝚘𝚛𝚛𝚎𝚌𝚝𝚊𝚖𝚎𝚗𝚝𝚎⚠️')
     except Exception as ex:
            print(str(ex))
 
