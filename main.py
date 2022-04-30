@@ -325,7 +325,7 @@ def onmessage(update,bot:ObigramClient):
             else:
                 bot.sendMessage(update.message.chat.id,'⚠️No posee permisos de administrador⚠️')
             return
-        if '/db' in msgText:
+        if '/obtenerbd' in msgText:
             isadmin = jdb.is_admin(username)
             if isadmin:
                 sms1 = bot.sendMessage(update.message.chat.id,'Enviando la databse del bot...')
