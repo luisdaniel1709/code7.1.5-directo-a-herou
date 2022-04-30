@@ -341,6 +341,7 @@ def onmessage(update,bot:ObigramClient):
 
         # comandos de usuario
         if '/help' in msgText:
+            message = bot.sendMessage(update.message.chat.id,'🙃')
             tuto = open('tuto.txt','r')
             bot.sendMessage(update.message.chat.id,tuto.read())
             tuto.close()
