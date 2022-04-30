@@ -464,7 +464,7 @@ def onmessage(update,bot:ObigramClient):
                     statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
                     bot.sendMessage(update.message.chat.id,statInfo)
             except:
-                bot.sendMessage(update.message.chat.id,'⚠️Error en el comando up tipo de subida (evidence,draft,blog,perfil,calendar))⚠️')
+                bot.sendMessage(update.message.chat.id,'⚠️Error en el comando up tipo de subida (evidence,draft,blog,perfil,calendar)⚠️')
             return
         if '/proxy' in msgText:
             try:
@@ -553,8 +553,8 @@ def onmessage(update,bot:ObigramClient):
         thread.store('msg',message)
 
         if '/start' in msgText:
-            message = bot.sendMessage(update.message.chat.id,'👋🏻')
-            bot.editMessageText(message,start_msg)
+            msg = bot.sendMessage(update.message.chat.id,'👋🏻')
+            bot.editMessageText(message,msg)
             return
             start_msg = '   🌟𝔹𝕆𝕋 𝕀ℕ𝕀ℂ𝕀𝔸𝔻𝕆🌟\n'
             start_msg+= '࿇ ══━━━━✥◈✥━━━━══ ࿇\n'
