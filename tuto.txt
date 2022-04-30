@@ -39,16 +39,15 @@ Se usa pasando el id detrás del comando, el ID va del número 2 al 6.
 Ejemplo:
 /repo 5
  ━━━━━━━━༺༻━━━━━━━━━
-/cloud ➳ Comando para cambiar a modo Nube.
-Solo use el comando /cloud y automaticamente pasa a modo nube.
+/cloud ➳ Comando para cambiar de modo de subida a (cloud o moodle) predeterminadamente está en moodle.
+Ejemplo:
+/cloud moodle
+/cloud cloud
  ━━━━━━━━༺༻━━━━━━━━━
-/dir ➳ Comando para establecer a que carpeta de la nube se subira.
+/dir ➳ Comando para establecer a que carpeta de la nube cloud se subira.
 Se usa pasando el nombre del directorio detrás del comando.
 Ejemplo:
 /dir descargas
- ━━━━━━━━༺༻━━━━━━━━━
-/moodle ➳ Comando para cambiar a moodle.
-Solo use el comando /moodle y automaticamente pasa a modo moodle, predeterminadamente siempre esta en moodo moodle.
  ━━━━━━━━༺༻━━━━━━━━━
 /up ➳ Comando para configurar que tipo de subida a moodle.
 existen 5 maneras: 
