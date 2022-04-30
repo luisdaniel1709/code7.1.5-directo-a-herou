@@ -141,7 +141,7 @@ def createStat(username,userdata,isadmin):
     if userdata['tokenize']!=0:
        tokenize = 'SI'
     msg+= '➢ Proxy: ' + proxy + '\n'
-    msg+= '➢ Tokenizar : ' + tokenize + '\n\n'
+    msg+= '➢ Tokenizar: ' + tokenize + '\n\n'
     msg+= '⚙️𝙲𝙾𝙽𝙵𝙸𝙶𝚄𝚁𝙰𝚁 𝙲𝚁𝙴𝙳𝙴𝙽𝙲𝙸𝙰𝙻𝙴𝚂⚙️\n Ejemplo: /acc usuario,contraseña'
     return msg
     
