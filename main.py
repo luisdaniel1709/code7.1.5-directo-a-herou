@@ -555,7 +555,7 @@ def onmessage(update,bot:ObigramClient):
         thread.store('msg',message)
 
         if '/start' in msgText:
-            bot.editMessageText(msg,'🦾')
+            message = bot.sendMessage(update.message.chat.id,'🦾')
             start_msg = '   🌟𝔹𝕆𝕋 𝕀ℕ𝕀ℂ𝕀𝔸𝔻𝕆🌟\n'
             start_msg+= '࿇ ══━━━━✥◈✥━━━━══ ࿇\n'
             start_msg+= '🤖Hola @' + str(username)+'\n'
