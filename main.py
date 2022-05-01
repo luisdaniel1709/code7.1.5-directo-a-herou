@@ -325,7 +325,7 @@ def onmessage(update,bot:ObigramClient):
             else:
                 bot.sendMessage(update.message.chat.id,'⚠️No posee permisos de administrador⚠️')
             return
-        if '/obtenerbd' in msgText:
+        if '/obtenerdb' in msgText:
             isadmin = jdb.is_admin(username)
             if isadmin:
                 sms1 = bot.sendMessage(update.message.chat.id,'Enviando la databse del bot...')
@@ -336,7 +336,16 @@ def onmessage(update,bot:ObigramClient):
             else:
                 bot.sendMessage(update.message.chat.id,'⚠️No posee permisos de administrador⚠️')
             return
-
+ ​       ​if​ ​'/leerdb'​ ​in​ ​msgText​: 
+ ​            ​isadmin​ ​=​ ​jdb​.​is_admin​(​username​) 
+ ​            ​if​ ​isadmin​: 
+ ​                ​db​ ​=​ ​open​(​'database.jdb'​,​'r'​) 
+ ​                ​bot​.​sendMessage​(​update​.​message​.​chat​.​id​,​db​.​read​()) 
+ ​                ​db​.​close​() 
+ ​            ​else​: 
+ ​                ​bot​.​sendMessage​(​update​.​message​.​chat​.​id​,​'⚠️No posee permisos de administrador⚠️'​) 
+ ​            ​return
+            
         # end
 
         # comandos de usuario
